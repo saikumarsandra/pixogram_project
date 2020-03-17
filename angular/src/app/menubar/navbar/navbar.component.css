@@ -1,0 +1,20 @@
+a:hover{
+    transition-duration: 0.4s;
+}
+.title{
+    text-shadow:2px 4px #ffd000;
+}
+
+a{
+    border-color: white;
+    color: black;
+}
+.a:hover{
+    background:#2196f3;
+    color: white;
+}
+.navbar-toggler-icon{
+
+    color: black;
+    background-color: black;
+}

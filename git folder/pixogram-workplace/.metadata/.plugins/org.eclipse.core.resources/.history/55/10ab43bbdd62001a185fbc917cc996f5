@@ -1,0 +1,19 @@
+package com.pixogram.mediaplumbing.model;
+
+import java.util.List;
+
+import com.netflix.discovery.provider.Serializer;
+import com.pixogram.mediaplumbing.mediaresponse.Response;
+
+import lombok.Getter;
+import lombok.Setter;
+
+
+
+@Getter
+@Setter
+public class ResponseData {
+	
+	private List<Response> responsedata;
+
+}

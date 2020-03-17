@@ -1,0 +1,6 @@
+package com.cts.training.actionservice.repository;
+
+public interface CustomRepository {
+
+	public ActionsCountModel getLikes(Integer mediaId);
+}

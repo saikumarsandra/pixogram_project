@@ -1,0 +1,52 @@
+
+    <div id="singleMedia" class="container">
+      <br>
+      <h1 class="text-center"> Upload Single Media File </h1>
+
+      <form class="py-5" class="formgroup"  [formGroup]="myFormGroup" (ngSubmit)="Upload()" >
+        <div class="form-group row mt-5">
+         
+          <label for="browse" class="col-sm-2 col-form-label "> Browse </label>
+          <div class="col-sm-10">
+
+             <div class="text-center">
+         
+            <img *ngIf="!imgURL" width="244.53" height="244.53"  >
+          
+              <img class="img-fluid" [src]="imgURL" *ngIf="imgURL" width="244.53" height="244.53" > 
+
+          </div>
+   
+              <input  name="file" type="file"  accept="image/*"  class="form-control"(change)="onImageLoad($event)" >
+             
+          </div>   
+        </div>
+        <div class="form-group row">
+          <label for="title" class="col-sm-2 col-form-label"> Title </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="title" placeholder="Enter Title" [formControl]="myFormGroup.controls['title']" >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="description" class="col-sm-2 col-form-label" >Description</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="5" id="description" [formControl]="myFormGroup.controls['description']"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tags" class="col-sm-2 col-form-label">Tags</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="tags" [formControl]="myFormGroup.controls['tags']">
+          </div>
+        </div>
+       
+        <hr>
+             <div > <input type="submit"  class=" btn btn-outline-danger btn-lg" value="Upload">
+              <a class="btn btn-outline-danger btn-lg" [routerLink]="['/multiplemedia']">Multiple Media</a>
+             </div>
+
+            
+      </form>
+    </div>
+
+   

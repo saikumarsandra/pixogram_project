@@ -1,0 +1,5 @@
+package com.cts.training.userservice.model;
+
+public class Usernames {
+
+}

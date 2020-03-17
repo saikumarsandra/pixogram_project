@@ -1,0 +1,60 @@
+package com.cts.training.Newsfeedservice.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.cts.training.Newsfeedservice.entity.Newsfeed;
+import com.cts.training.Newsfeedservice.repository.NewsfeedRepository;
+
+
+
+
+
+
+// @Component
+@Service
+public class NewsfeedServiceImpl implements INewsfeedService {
+	@Autowired
+	private NewsfeedRepository newsfeedRepository;
+	
+	public List<Newsfeed> getall(){
+		
+		List<Newsfeed> records = this.newsfeedRepository.findAll();
+		return records;
+		
+	}
+	
+	public void save(NewsfeedData newsfeed) {
+		Newsfeed data = new Newsfeed();
+		data.setFeed(newsfeed.getFeed());
+		data.setUserId(newsfeed.getUserId());
+		this.newsfeedRepository.save(data);
+		
+	}
+	
+	public Optional<Newsfeed> getWithId(Integer id){
+		Optional<Newsfeed> record= this.newsfeedRepository.findById(id);
+		return record;
+		
+	}
+	
+	public void updateuser(NewsfeedData feed) {
+		Newsfeed data = new Newsfeed();
+		data.setCreatedOn(feed.getCreatedOn());
+		data.setFeed(feed.getFeed());
+		data.setId(feed.getId());
+		data.setUserId(feed.getUserId());
+		
+		this.newsfeedRepository.save(data);
+	}
+
+}
+
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.pixogram.mediaplumbing.model;
+
+public class NewsFeedModel {
+
+}

@@ -1,0 +1,23 @@
+<div>
+    <div class="container">
+       <div class="row">
+       <div class="col-3 d-flex flex-column">
+      
+       </div>
+         <div class="col">
+           <div class="secondary-light  p-4" >
+               <h5 class="h2 border-bottom "  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Newsfeed</h5>
+            <div class="col-12-lg" *ngFor="let feed of feeds">
+               <div class="row mt-3">
+                   <div class="col-4">{{feed.createdOn}}</div>
+                 
+                   <div class="col-4">{{feed.feed}}</div>
+            
+               </div>
+               <hr>
+            </div>
+           </div>
+
+       </div>
+   </div>
+   </div>

@@ -1,0 +1,35 @@
+.fa-heart {
+    color: red;
+}
+
+.fa-thumbs-down {
+    color: #3b5998;
+}
+
+.fa-comments {
+    color: rgb(19, 27, 27)
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 200ms ease-in;
+    transform: scale(1);
+    display: inherit;
+}
+
+a:hover {
+    transition: all 150ms ease-in;
+    transform: scale(1.1);
+}
+#rcorners3 {
+    border-radius: 25px;
+   
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }

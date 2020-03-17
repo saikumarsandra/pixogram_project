@@ -1,0 +1,96 @@
+<div   >
+    <div class="container-fluid">
+   <div class="row">
+      <!-- <div class="col-4 d-flex flex-column">
+           <a class="badge  bd-highlight p-2 m-3 border-bottom border-dark" >Account</a>
+           <a [routerLink]="['/login']"class="badge badge-primary bd-highlight p-2 m-3">Login</a>
+           <label> &nbsp;&nbsp;&nbsp; already registerd ? click here to login</label>
+           
+       </div>
+       <!-- setting side data-->
+       <div class="col-8">
+           <div class="offset-3 col">
+               <div class="row ">
+                   <div class="col-12 ">
+                       <p class="h2" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;"> Registration details</p>
+                   </div>
+               </div>
+               <br>
+               <div class="row mt-3">
+                   <div class="col-8">
+                       <form  class="formgroup" [formGroup]="myFormGroup" (ngSubmit)="register()">
+                        
+
+       
+                       <div class="form-group row">
+                               <label for="username" class="col-sm-4 col-form-label">Username</label>
+                               <div class="col-sm-8">
+                                <input type="text" class="form-control"  placeholder="User Name" #txtuser  [formControl]="myFormGroup.controls['username']" />
+                                <div *ngIf="submitted && f.username.errors" class="invalid-feedback"></div> 
+                                
+                                    <p *ngIf="validate" class="col-sm-2" style="color: green;">{{avilable}}</p>
+           
+                                   <!-- <button type="button" id="checkun" class="btn-info"><b>Check</b></button> -->
+                                
+                               </div>
+                           </div>
+                           <div class="form-group row" >
+                               <label for="password" class="col-sm-4 col-form-label">Password</label>
+                               <div class="col-sm-8">
+                                    <input type="password" class="form-control"  placeholder="Password" [formControl]="myFormGroup.controls['password']"/> 
+                                   <div *ngIf="submitted && f.password1.errors" class="invalid-feedback"></div>
+                        
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="repeatPassword"  class="col-sm-4 col-form-label">Repeat Password</label>
+                               <div class="col-sm-8">
+                                <input type="password" class="form-control"   placeholder="Repeat password" [formControl]="myFormGroup.controls['password2']"/>
+                                <div *ngIf="submitted && f.password2.errors" class="invalid-feedback"></div>
+                               </div>
+                                                      </div>
+                        
+                           <div class="form-group row">
+                               <label for="email" class="col-sm-4 col-form-label">Email</label>
+                               <div class="col-sm-8">
+                                     <input type="email" class="form-control"   placeholder="Email" [formControl]="myFormGroup.controls['email']"/>
+                                <div *ngIf="submitted && f.uemail.errors" class="invalid-feedback"></div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                            <label for="profile" class="col-sm-4 col-form-label">Profile</label>
+                            <div class="col-sm-8 btn btn-dark">
+                                     <input type="file" class="form-control"    (change)="selectFile($event)" [formControl]="myFormGroup.controls['profile']"  />
+                                        <div *ngIf="submitted && f.profile.errors" class="invalid-feedback"></div>
+                                        
+                                        <div *ngIf="currentFileUpload" class="progress mt-2">
+                                            <div class="progress-bar progress-bar-info progress-bar-striped bg-dark" role="progressbar"
+                                                attr.aria-valuenow="{{progress.percentage}}" aria-valuemin="0" aria-valuemax="100"
+                                                [ngStyle]="{width:progress.percentage+'%'}">
+                                                {{progress.percentage}}%</div>
+                                          </div>
+                               </div>
+                                </div>
+
+                                <div class="form-group  row">
+                                      <input type="submit" value="Register" class="btn btn-outline-link m-auto col-3" />
+                                                             
+                           </div>
+                          
+
+                           
+
+
+                        </form>
+                   </div>
+                 <!--   <div class="col-4">
+                       <button type="button"  value=" check" id="check" (change)="checkUserName(txtusername)" class="btn btn-primary" >check</button>
+                   </div>--> 
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+

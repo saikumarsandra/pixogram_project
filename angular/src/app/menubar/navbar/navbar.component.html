@@ -1,0 +1,26 @@
+
+    <nav class="navbar navbar-expand-lg navbar-shadow  bd-highlight container-fluid"  >
+        <img src="assets/logo.png" class="rounded-circle" alt="Logo here" height="70px" width="60px" [routerLink]="['/login']">
+ <p class = "title justify-content-start" style="color: black;font-weight: bolder; text-shadow: lightyellow;font-style: italic;font-size:50px;outline-style:initial; font-family:  Georgia, Times, 'Times New Roman', serif;" [routerLink]="['/login']">pixogram </p>
+         
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon " ></span>
+         </button>
+         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+             <div class="navbar-nav m-auto">
+                
+                 <a class="nav-item nav-link m-auto a" [routerLink]="['/upload']" *ngIf="auth.isUserLoggedIn()">Upload Media </a>
+                 <a class="nav-item nav-link m-auto a" [routerLink]="['/mymedia']"  *ngIf="auth.isUserLoggedIn()">My Media</a>
+                 <a class="nav-item nav-link m-auto a" [routerLink]="['/followers']" *ngIf="auth.isUserLoggedIn()">Followers/Following</a>
+                 <a class="nav-item nav-link m-auto a" [routerLink]="['/blocked']"  *ngIf="auth.isUserLoggedIn()">Blockedusers </a>
+                 <a class="nav-item nav-link m-auto a" [routerLink]="['/logout']" *ngIf="auth.isUserLoggedIn()">Logout</a>
+              
+             </div>
+               <div class="col-3 d-flex flex-column " >
+         <a   [routerLink]="['/account']" class="nav-item nav-link m-auto m-auto a"  *ngIf="auth.isUserLoggedIn()">Account </a>
+                  
+     </div>
+         </div>
+
+     </nav>

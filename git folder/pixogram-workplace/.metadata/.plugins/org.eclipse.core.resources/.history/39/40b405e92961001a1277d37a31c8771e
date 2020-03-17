@@ -1,0 +1,17 @@
+package com.pixogram.commentservice.model;
+
+import java.time.LocalDateTime;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+public class CommentsData {
+	
+	private Integer id;
+	private Integer mediaId;
+	private Integer userId;
+	private String comments;
+	private LocalDateTime createdOn;
+}

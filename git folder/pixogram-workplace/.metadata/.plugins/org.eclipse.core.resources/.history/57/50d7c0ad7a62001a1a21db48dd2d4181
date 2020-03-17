@@ -1,0 +1,5 @@
+package com.pixogram.mediaservice.model;
+
+public class MediaDataModelRespo {
+
+}

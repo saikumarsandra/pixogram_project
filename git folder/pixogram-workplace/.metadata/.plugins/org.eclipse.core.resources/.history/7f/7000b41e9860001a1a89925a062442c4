@@ -1,0 +1,10 @@
+package com.pixogram.mediaplumbing.model;
+
+import java.util.List;
+
+import com.pixogram.mediaplumbing.mediaresponse.Response;
+
+public class ResponseData {
+	private List<Response> responseData;
+
+}

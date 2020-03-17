@@ -1,0 +1,38 @@
+package com.pixogram.mediaplumbing.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Media {
+	
+	
+	private Integer id;
+	private Integer userId;
+	private String title;
+	private String description;
+	private String tags;
+	private String mimeType;
+	private String fileUrl;
+	
+	
+	
+	public static Media fromMedia(Media media) {
+		
+		Media medias = new Media();
+		medias.id = media.getId();
+		medias.userId = media.getUserId();
+		medias.title = media.getTitle();
+		medias.description = media.getDescription();
+		medias.tags = media.getTags();
+		medias.mimeType = media.getMimeType();
+		medias.fileUrl = media.getFileUrl();
+		return medias;
+	}
+
+}

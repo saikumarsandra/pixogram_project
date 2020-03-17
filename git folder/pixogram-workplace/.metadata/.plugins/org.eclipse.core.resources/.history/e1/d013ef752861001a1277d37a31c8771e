@@ -1,0 +1,5 @@
+package com.cts.training.actionservice.repository;
+
+public class CustomRepositoryImpl {
+
+}

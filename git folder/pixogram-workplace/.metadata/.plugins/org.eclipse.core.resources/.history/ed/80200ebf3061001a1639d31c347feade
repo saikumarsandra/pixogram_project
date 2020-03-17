@@ -1,0 +1,18 @@
+package com.cts.training.Newsfeedservice.service;
+
+import java.util.List;
+
+import com.cts.training.Newsfeedservice.entity.Newsfeed;
+
+
+
+
+
+public interface INewsfeedService {
+
+
+	public List<Newsfeed> getall();
+	public void save(NewsfeedData action);
+	public Optional<Newsfeed> getWithId(Integer id);
+	public void updateuser(NewsfeedData action);
+}

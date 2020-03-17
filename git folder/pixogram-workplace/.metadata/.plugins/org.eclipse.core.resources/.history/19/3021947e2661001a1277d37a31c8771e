@@ -1,0 +1,5 @@
+package com.cts.training.actionservice;
+
+public class ActionModel {
+
+}

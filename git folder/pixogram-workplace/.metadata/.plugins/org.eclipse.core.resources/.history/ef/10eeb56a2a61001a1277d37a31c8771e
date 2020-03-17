@@ -1,0 +1,20 @@
+package com.cts.training.commentservice.service;
+
+import java.util.List;
+
+import com.cts.training.commentservice.entity.Comment;
+import com.cts.training.commentservice.model.CommentsCountModel;
+import com.cts.training.commentservice.model.CommentsData;
+
+
+
+
+
+public interface ICommentService {
+	public List<Comment> getall();
+	public void save(CommentsData action);
+	public Optional<Comment> getWithId(Integer id);
+	public void updateuser(CommentsData action);
+	public CommentsCountModel getCountById(Integer mediaid);
+
+}

@@ -1,0 +1,21 @@
+package com.cts.training.actionservice.service;
+
+import java.util.List;
+
+import com.cts.training.actionservice.entity.Action;
+import java.util.List;
+import java.util.Optional;
+
+import com.pixogram.actionservice.entity.Actions;
+import com.pixogram.actionservice.model.ActionData;
+import com.pixogram.actionservice.model.ActionsCountModel;
+
+public interface IActionService {
+	
+	public List<Actions> getall();
+	public void save(ActionData action);
+	public Optional<Actions> getWithId(Integer id);
+	public void updateuser(ActionData action);
+	public ActionsCountModel getLikesByMediaId(Integer id);
+	
+}
